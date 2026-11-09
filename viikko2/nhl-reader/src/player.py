@@ -1,12 +1,11 @@
-class Player:
-    def __init__(self, dict):
-        self.name = dict['name']
-        self.nationality = dict['nationality']
-        self.assists = dict['assists']
-        self.goals = dict['goals']
-        self.team = dict['team']
-        self.games = dict['games']
-        self.id = dict['id']
+class Player: # pylint: disable=too-few-public-methods
+    def __init__(self, data):
+        self.name = data['name']
+        self.nationality = data['nationality']
+        self.assists = data['assists']
+        self.goals = data['goals']
+        self.team = data['team']
+        self.games = data['games']
         self.points = self.assists + self.goals
 
     def __str__(self):
