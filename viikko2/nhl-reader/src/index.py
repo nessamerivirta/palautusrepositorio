@@ -16,9 +16,16 @@ def main():
 
     print("Oliot:")
 
+    finnish_players = []
+
     for player in players:
         if player.nationality == "FIN":
-            print(player)
+            finnish_players.append(player)
+
+    sorted_players = sorted(finnish_players, key = lambda player: player.points, reverse= True)
+
+    for player in sorted_players:
+        print(player)
 
 if __name__ == "__main__":
     main()
