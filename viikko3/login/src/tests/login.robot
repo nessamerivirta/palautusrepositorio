@@ -17,6 +17,13 @@ Login With Incorrect Password
     Click  button >> text=Login
     Login Should Fail With Message  Invalid username or password
 
+Login With Nonexistent Username
+    Go To Login Page
+    Fill Text  input[name="username"]  nonexistent
+    Fill Text  input[name="password"]  password123
+    Click  button >> text=Login
+    Login Page Should Be Open
+
 *** Keywords ***
 Login Should Succeed
     Main Page Should Be Open
@@ -38,3 +45,4 @@ Reset Application Create User And Go To Login Page
     Reset Application
     Create User  kalle  kalle123
     Go To Login Page
+
